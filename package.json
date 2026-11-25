@@ -4,13 +4,15 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"dev": "node build.js && miniflare --watch",
+		"dev": "node build.js && wrangler dev",
 		"build": "node build.js",
-		"deploy": "node build.js && wrangler publish"
+		"deploy": "node build.js && wrangler deploy"
 	},
 	"devDependencies": {
-		"@cloudflare/wrangler": "^1.19.8",
-		"miniflare": "^2.3.0",
-		"prettier": "^2.5.1"
+		"prettier": "^2.5.1",
+		"wrangler": "4.168.0"
+	},
+	"engines": {
+		"node": ">=22.12.0"
 	}
 }
